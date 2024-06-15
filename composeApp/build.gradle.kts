@@ -41,6 +41,9 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            //Voyager Navigation
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.transitions)
         }
     }
 }
