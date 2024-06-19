@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import bottomBar.BottomBarScreen
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
@@ -46,12 +47,16 @@ class MainScreen : Screen {
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
-        Box(
+        Column (
             modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
+            verticalArrangement = Arrangement.Center
         ) {
             Button(modifier = Modifier, onClick = { navigator.push(SecondScreen()) }) {
                 Text("Navigate to Second Screen")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(modifier = Modifier, onClick = { navigator.push(BottomBarScreen()) }) {
+                Text("BottomBar")
             }
         }
     }

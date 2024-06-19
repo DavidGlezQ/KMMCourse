@@ -44,6 +44,7 @@ kotlin {
             //Voyager Navigation
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.transitions)
+            implementation(libs.voyager.tabNavigator)
         }
     }
 }
