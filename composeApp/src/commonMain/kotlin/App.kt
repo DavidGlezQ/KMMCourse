@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import bottomBar.BottomBarScreen
+import bottomBar.ProfileTab
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
@@ -30,6 +31,7 @@ import cafe.adriel.voyager.transitions.FadeTransition
 import cafe.adriel.voyager.transitions.ScaleTransition
 import cafe.adriel.voyager.transitions.SlideTransition
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import settingsPersistence.ProfileScreen
 
 @Composable
 @Preview
@@ -57,6 +59,10 @@ class MainScreen : Screen {
             Spacer(modifier = Modifier.height(16.dp))
             Button(modifier = Modifier, onClick = { navigator.push(BottomBarScreen()) }) {
                 Text("BottomBar")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(modifier = Modifier, onClick = { navigator.push(ProfileScreen()) }) {
+                Text("Data Persistence")
             }
         }
     }
